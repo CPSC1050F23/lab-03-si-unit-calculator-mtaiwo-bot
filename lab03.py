@@ -52,9 +52,8 @@ u_unit = str(input()).strip
 u_val = float(input("Please input a value: \n"))
 #This is a nessested if-else statement. This is used to determnine the unit the user selected and convert it
 #into meter. The first branch is if the user imports a negative value because it will
-if u_val < 0:
-    print("You can't have a negative distance!")  
-elif u_unit == 'cm':
+  
+if u_unit == 'cm':
     con = u_val / 100
     print(f'{u_val:.2f} {u_unit} in meters: {con:.2f}')
 elif u_unit == 'm':
@@ -90,9 +89,8 @@ elif u_unit == 'lbs':
 else:
     print("Unsupported unit")
  
-if u_val < 0:
-    print("You can't have a negative speed!")
-elif u_unit == 'm/s':
+
+if u_unit == 'm/s':
     con = u_val
     print(f'{u_val:.2f} {u_unit} in grams: {con:.2f}')
 elif u_unit == 'km/h':
@@ -107,9 +105,8 @@ elif u_unit == 'mph':
 else:
     print("Unsupported unit")
 
-if u_val < 0:
-    print("You can't have a negatice temperature!")
-elif u_unit == 'C':
+
+if u_unit == 'C':
     con = u_val
     print(f'{u_val:.2f} {u_unit} in celcius: {con:.2f}')
 elif u_unit == 'F':
