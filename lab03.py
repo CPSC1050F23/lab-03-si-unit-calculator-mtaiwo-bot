@@ -34,7 +34,7 @@ Write your code to complete the tests in the Gradescope autograder.
 """
 
 print("Welcome to the convert to SI units calculator!")
-print("Please input a type of unit that you would like to convert. Here are\nyour options: \ndistance \nmass \nspeed \ntemperature\n")
+print("Please input a type of unit that you would like to convert. Here are your options: \ndistance \nmass \nspeed \ntemperature\n")
 #Ask user for input on what measurement
 measurement = str(input()).strip()
 if measurement == 'distance':
