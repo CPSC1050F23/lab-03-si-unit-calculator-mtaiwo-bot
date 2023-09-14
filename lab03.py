@@ -72,9 +72,8 @@ elif u_unit == 'ft':
 else:
     print("Unsupported unit")
 
-if u_val < 0:  
-    print("You can't have a negative mass!")
-elif u_unit == 'mg':
+
+if u_unit == 'mg':
     con = u_val / 1000
     print(f'{u_val:.2f} {u_unit} in grams: {con:.2f}')
 elif u_unit == 'g':
@@ -86,6 +85,8 @@ elif u_unit == 'kg':
 elif u_unit == 'lbs':
     con = u_val * 453.592
     print(f'{u_val:.2f} {u_unit} in grams: {con:.2f}')
+elif u_val < 0:  
+    print("You can't have a negative mass!")
 else:
     print("Unsupported unit")
  
