@@ -36,7 +36,8 @@ Write your code to complete the tests in the Gradescope autograder.
 print("Welcome to the convert to SI units calculator!")
 print("Please input a type of unit that you would like to convert. Here are your options: \ndistance \nmass \nspeed \ntemperature\n")
 #Ask user for input on what measurement
-measurement = str(input()).strip()
+measurement = str(input())
+#Ask user to select unit type to convert based on measurement user inputted
 if measurement == 'distance':
     print("Please select one of the following to convert to meters: cm m km in ft: ")
 elif measurement == 'mass':
@@ -45,15 +46,23 @@ elif measurement == 'speed':
     print("Please select one of the following to convert to meters per second: m/s km/h ft/s mph: ")
 elif measurement == 'temperature':
     print("Please select one of the following to convert to Celcius: C F K: ")
+#If user inputs a type of unit that can not be converted the program will print 
+#Invalid unit type
 else:
     print("Invalid unit type")
-
-u_unit = str(input()).strip
+   
+ 
+#Ask user for unit they want to convert
+u_unit = str(input())
+#Ask user for value they want to convert
 u_val = float(input("Please input a value: \n"))
+
 #This is a nessested if-else statement. This is used to determnine the unit the user selected and convert it
-#into meter. The first branch is if the user imports a negative value because it will
-  
-if u_unit == 'cm':
+#into meters. The first branch is if the user imports a negative value because it will print You 
+#can't have a negative distance
+if u_val < 0:
+    print("You can't have a negative distance!")     
+elif u_unit == 'cm':
     con = u_val / 100
     print(f'{u_val:.2f} {u_unit} in meters: {con:.2f}')
 elif u_unit == 'm':
@@ -69,7 +78,9 @@ elif u_unit == 'in':
 elif u_unit == 'ft':
     con = u_val * 0.3048
     print(f'{u_val:.2f} {u_unit} in meters: {con:.2f}') 
-
+else:
+    print("Unsupported unit")
+    print("Please select one of the following to convert to meters: cm m km in ft: ")
 
 if u_val < 0:  
     print("You can't have a negative mass!")
@@ -85,10 +96,14 @@ elif u_unit == 'kg':
 elif u_unit == 'lbs':
     con = u_val * 453.592
     print(f'{u_val:.2f} {u_unit} in grams: {con:.2f}')
+else:
+    print("Unsupported unit")
+    print("Please select one of the following to convert to grams: mg g kg lbs: ")
 
  
-
-if u_unit == 'm/s':
+if u_val < 0:
+    print("You can't have a negative speed!")
+elif u_unit == 'm/s':
     con = u_val
     print(f'{u_val:.2f} {u_unit} in grams: {con:.2f}')
 elif u_unit == 'km/h':
@@ -100,10 +115,13 @@ elif u_unit == 'ft/s':
 elif u_unit == 'mph':
     con = u_val * 0.44704
     print(f'{u_val:.2f} {u_unit} in meters per second: {con:.2f}')
+else:
+    print("Unsupported unit")
+    print("Please select one of the following to convert to meters per second: m/s km/h ft/s mph: ")
 
-
-
-if u_unit == 'C':
+if u_val < 0:
+    print("You can't have a negative temperature")
+elif u_unit == 'C':
     con = u_val
     print(f'{u_val:.2f} {u_unit} in celcius: {con:.2f}')
 elif u_unit == 'F':
@@ -112,6 +130,10 @@ elif u_unit == 'F':
 elif u_unit == 'K':
     con = u_val - 273.15
     print(f'{u_val:.2f} {u_unit} in celcius: {con:.2f}')
+else:
+    print("Unsupported unit")
+    print("Please select one of the following to convert to Celcius: C F K: ")
+
 
 
 
