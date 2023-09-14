@@ -107,14 +107,17 @@ elif u_unit == 'mph':
 
 if u_unit == 'C':
     con = u_val
-    print(f'{u_val:.2f} {u_unit} in celcius: {con:.2f}')
+    print(f'{u_val:.2f} {u_unit} in celsius: {con:.2f}')
 elif u_unit == 'F':
     con = (u_val - 32) * (5/9)
-    print(f'{u_val:.2f} {u_unit} in celcius: {con:.2f}')
+    print(f'{u_val:.2f} {u_unit} in celsius: {con:.2f}')
 elif u_unit == 'K':
     con = u_val - 273.15
-    print(f'{u_val:.2f} {u_unit} in celcius: {con:.2f}')
+    print(f'{u_val:.2f} {u_unit} in celsius: {con:.2f}')
 
+if (u_unit != 'cm') or (u_unit != 'm') or (u_unit != 'km') or (u_unit != 'in') or (u_unit != 'ft') or (u_unit != 'mg') or (u_unit != 'g') or (u_unit != 'kg') or (u_unit != 'lbs') or (u_unit != 'm/s') or (u_unit != 'km/h') or (u_unit != 'ft/s') or (u_unit != 'mph') or (u_unit != 'F') or (u_unit != 'K'):
+    print("Unsupported unit")
+    
 
 
 
