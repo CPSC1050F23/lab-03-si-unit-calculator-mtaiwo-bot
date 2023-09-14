@@ -40,16 +40,23 @@ measurement = str(input()).strip()
 #Ask user to select unit type to convert based on measurement user inputted
 if measurement == 'distance':
     print("Please select one of the following to convert to meters: cm m km in ft: ")
+    elif measurement != 'distance':
+        print("Invalid unit type")
 elif measurement == 'mass':
     print("Please select one of the following to convert to grams: mg g kg lbs: ")
+    elif measurement != 'mass':
+        print("Invalid unit type")
 elif measurement == 'speed':
     print("Please select one of the following to convert to meters per second: m/s km/h ft/s mph: ")
+    elif measurement != 'speed':
+        print("Invalid unit type")
 elif measurement == 'temperature':
     print("Please select one of the following to convert to Celcius: C F K: ")
+    elif measurement != 'temperature':
+        print("Invalid unit type")
 #If user inputs a type of unit that can not be converted the program will print 
 #Invalid unit type
-else:
-    print("Invalid unit type")
+
    
  
 #Ask user for unit they want to convert
