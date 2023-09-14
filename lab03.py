@@ -126,7 +126,7 @@ else:
     print("Please select one of the following to convert to meters per second: m/s km/h ft/s mph: ")
 
 if u_val < 0:
-    print("You can't have a negative temperature")
+    print("You can't have a negative temperature!")
 elif u_unit == 'C':
     con = u_val
     print(f'{u_val:.2f} {u_unit} in celcius: {con:.2f}')
