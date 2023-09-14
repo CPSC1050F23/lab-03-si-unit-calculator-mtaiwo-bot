@@ -37,13 +37,13 @@ print("Welcome to the convert to SI units calculator!")
 print("Please input a type of unit that you would like to convert. Here are\nyour options: \ndistance \nmass \nspeed \ntemperature\n")
 #Ask user for input on what measurement
 measurement = str(input()).strip()
-if measurement = 'distance':
+if measurement == 'distance':
     print("Please select one of the following to convert to meters: cm m km in\nft: ")
-elif measurement = 'mass':
+elif measurement == 'mass':
     print("Please select one of the following to convert to grams: mg g kg\nlbs: ")
-elif measurement = 'speed':
+elif measurement == 'speed':
     print("Please select one of the following to convert to meters per second: m/s km/h ft/s\nmph: ")
-elif measurement = 'temperature':
+elif measurement == 'temperature':
     print("Please select one of the following to convert to Celcius: C F\nK: ")
 else:
     print("Invalid unit type")
@@ -72,7 +72,7 @@ elif u_unit == 'ft':
     print(f'{u_val:.2f} {u_unit} in meters: {con:.2f}') 
 else:
     print("Unsupported unit")
- 
+
 if u_val < 0:  
     print("You can't have a negative mass!")
 elif u_unit == 'mg':
@@ -84,12 +84,12 @@ elif u_unit == 'g':
 elif u_unit == 'kg':
     con = u_val * 1000
     print(f'{u_val:.2f} {u_unit} in grams: {con:.2f}')
-elif u_units == 'lbs':
+elif u_unit == 'lbs':
     con = u_val * 453.592
     print(f'{u_val:.2f} {u_unit} in grams: {con:.2f}')
 else:
     print("Unsupported unit")
-
+ 
 if u_val < 0:
     print("You can't have a negative speed!")
 elif u_unit == 'm/s':
@@ -120,6 +120,7 @@ elif u_unit == 'K':
     print(f'{u_val:.2f} {u_unit} in celcius: {con:.2f}')
 else:
     print("Unsupported unit")
+
 
 
 
